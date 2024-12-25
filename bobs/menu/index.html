@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bob's Menu</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2PPH12EZSP"></script>
   <style>
      body {
       margin: 0;
@@ -52,8 +53,14 @@
 </head>
 <body >
     <script>
-           // Update snowflakes position on scroll
-           window.addEventListener('scroll', function() {
+      window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2PPH12EZSP');
+    
+    // Update snowflakes position on scroll
+      window.addEventListener('scroll', function() {
       const snowflakes = document.querySelectorAll('.snowflake');
       const scrollPosition = window.scrollY;
 
@@ -84,3 +91,7 @@
     <img src="menu_cristmas.png" alt="A static image" style="max-width: 100%; height: auto;">
 </body>
 </html>
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+<script>
+
+</script> -->
