@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bob's landing</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+         background: url("../imgs/black-bg.jpg") no-repeat center center
+          fixed;
+        background-size: cover;
+        color: white;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .logo {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+
+      .footer-buttons {
+        position: fixed;
+        bottom: 20px;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .button {
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        background: transparent;
+      }
+
+      .logo img {
+        width: 150px;
+      }
+   /* Define the animation */
+   @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Apply styles to the .platter class */
+        .platter {
+            display: block;
+            margin: auto;
+            animation: spin 100s linear infinite; /* Animation applied */
+        }
+    </style>
+  </head>
+  <body>
+    <div class="logo">
+      <img src="../imgs/logo.png" alt="Logo" />
+    </div>
+    <div style="margin-top: 140px">
+      <img class="platter" src="../imgs/food-gif.png" width="100%" height="400px">
+    </div>
+    <div class="footer-buttons">
+      <div style="display: flex; flex-direction: column; align-items: center">
+        <h2>Order on</h2>
+        <div style="display: flex; gap:20px">
+          <a class="button" href="https://link.zomato.com/xqzv/rshare?id=9438730630563d53" target="_blank" rel="noopener noreferrer">
+            <img
+              src="../imgs/zomato-button.jpg"
+              alt="Zomato"
+              class="button-icon"
+            />
+        </a>
+          <a class="button" href="https://www.swiggy.com/direct/brand/48321?source=swiggy-direct&subSource=instagram">
+            <img
+              src="../imgs/swiggy-button.jpg"
+              alt="Swiggy"
+              class="button-icon"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
