@@ -1,67 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bob's Menu</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2PPH12EZSP"></script>
-  <style>
-     body {
-      margin: 0;
-      /* overflow: scroll;*/
-      background-color: #000;
-      overflow-x: hidden !important;
-    } 
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2PPH12EZSP');
 
-    .snowflake {
-      position: absolute;
-      top: -10px;
-      width: 10px;
-      height: 10px;
-      background-color: white;
-      border-radius: 50%;
-      opacity: 0.8;
-      animation: fall 5s linear infinite;
-    }
-
-    @keyframes fall {
-      0% {
-        top: -10px;
-        transform: translateX(0);
-      }
-      100% {
-        top: 100vh;
-        transform: translateX(calc(50vw - 50%));
-      }
-    }
-
-    /* Varying speeds and sizes */
-    .snowflake:nth-child(odd) {
-      animation-duration: 7s;
-      animation-timing-function: ease-in;
-      width: 8px;
-      height: 8px;
-    }
-
-    .snowflake:nth-child(even) {
-      animation-duration: 6s;
-      animation-timing-function: ease-out;
-      width: 12px;
-      height: 12px;
-    }
-
-  </style>
-</head>
-<body >
-    <script>
-      window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-2PPH12EZSP');
-    
     // Update snowflakes position on scroll
-      window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
       const snowflakes = document.querySelectorAll('.snowflake');
       const scrollPosition = window.scrollY;
 
@@ -87,10 +39,60 @@
         body.appendChild(snowflake);
       }
     }
-        createSnowflakes();
-      </script>
-    <img src="menu_cristmas.png" alt="A static image" style="max-width: 100%; height: auto;">
+    createSnowflakes();
+  </script>
+  <style>
+    body {
+      margin: 0;
+      /* overflow: scroll;*/
+      background-color: #000;
+      overflow-x: hidden !important;
+    }
+
+    .snowflake {
+      position: absolute;
+      top: -10px;
+      width: 10px;
+      height: 10px;
+      background-color: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: fall 5s linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        top: -10px;
+        transform: translateX(0);
+      }
+
+      100% {
+        top: 100vh;
+        transform: translateX(calc(50vw - 50%));
+      }
+    }
+
+    /* Varying speeds and sizes */
+    .snowflake:nth-child(odd) {
+      animation-duration: 7s;
+      animation-timing-function: ease-in;
+      width: 8px;
+      height: 8px;
+    }
+
+    .snowflake:nth-child(even) {
+      animation-duration: 6s;
+      animation-timing-function: ease-out;
+      width: 12px;
+      height: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <img src="menu_cristmas.png" alt="A static image" style="max-width: 100%; height: auto;">
 </body>
+
 </html>
 <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
 <script>
