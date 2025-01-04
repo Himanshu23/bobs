@@ -11,35 +11,6 @@
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-2PPH12EZSP');
-
-    // Update snowflakes position on scroll
-    window.addEventListener('scroll', function () {
-      const snowflakes = document.querySelectorAll('.snowflake');
-      const scrollPosition = window.scrollY;
-
-      snowflakes.forEach(snowflake => {
-        const speed = parseFloat(snowflake.style.animationDuration) || 5;
-        // Adjust snowflake movement so it goes all the way to the bottom
-        const maxScroll = document.body.scrollHeight - window.innerHeight;
-        const offset = (scrollPosition / maxScroll) * 100;
-        snowflake.style.transform = `translateX(${Math.random() * 100}vw) translateY(${offset}%)`;
-      });
-    });
-
-    function createSnowflakes() {
-      const numSnowflakes = 100;
-      const body = document.body;
-
-      for (let i = 0; i < numSnowflakes; i++) {
-        const snowflake = document.createElement('div');
-        snowflake.classList.add('snowflake');
-        snowflake.style.left = `${Math.random() * 100}vw`;
-        snowflake.style.animationDuration = `${Math.random() * 5 + 4}s`; // Random duration between 4 and 9 seconds
-        snowflake.style.animationDelay = `${Math.random() * 5}s`; // Random delay between 0 and 5 seconds
-        body.appendChild(snowflake);
-      }
-    }
-    createSnowflakes();
   </script>
   <style>
     body {
@@ -47,54 +18,11 @@
       /* overflow: scroll;*/
       background-color: #000;
       overflow-x: hidden !important;
-    }
-
-    .snowflake {
-      position: absolute;
-      top: -10px;
-      width: 10px;
-      height: 10px;
-      background-color: white;
-      border-radius: 50%;
-      opacity: 0.8;
-      animation: fall 5s linear infinite;
-    }
-
-    @keyframes fall {
-      0% {
-        top: -10px;
-        transform: translateX(0);
-      }
-
-      100% {
-        top: 100vh;
-        transform: translateX(calc(50vw - 50%));
-      }
-    }
-
-    /* Varying speeds and sizes */
-    .snowflake:nth-child(odd) {
-      animation-duration: 7s;
-      animation-timing-function: ease-in;
-      width: 8px;
-      height: 8px;
-    }
-
-    .snowflake:nth-child(even) {
-      animation-duration: 6s;
-      animation-timing-function: ease-out;
-      width: 12px;
-      height: 12px;
-    }
+    } 
   </style>
 </head>
 
 <body>
   <img src="menu.jpg" alt="Bob's Menu" style="max-width: 100%; height: auto;">
 </body>
-
 </html>
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
-<script>
-
-</script> -->
