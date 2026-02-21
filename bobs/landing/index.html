@@ -254,7 +254,7 @@
       right: 0;
       z-index: 10;
       width: 100%;
-      padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0));
+      padding: 10px 16px calc(14px + env(safe-area-inset-bottom, 0));
       background: rgba(26, 21, 18, 0.96);
       backdrop-filter: blur(8px);
       display: flex;
@@ -302,6 +302,14 @@
       height: 100%;
       object-fit: cover;
     }
+
+    .order-note {
+      font-size: 0.65rem;
+      color: rgba(254, 249, 243, 0.6);
+      text-align: center;
+      margin: 6px 12px 0;
+      line-height: 1.3;
+    }
   </style>
 </head>
 
@@ -335,6 +343,7 @@
         <img src="/bobs/imgs/swiggy-button.jpg" alt="Order on Swiggy" />
       </a>
     </div>
+    <p class="order-note">**Prices and discount on both the platforms can be different.**</p>
   </section>
 
   <script>
