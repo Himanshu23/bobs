@@ -12,7 +12,6 @@
     { "category": "starter", "name": "Bobs Chicken Keema Naan", "nonVeg": false, "image": "/bobs/imgs/food/starter/paneer_tikka.jpg", "originalPrice": 169, "discountedPrice": 129 },
     { "category": "starter", "name": "Boondi Raita", "nonVeg": false, "image": "/bobs/imgs/food/starter/boondi_raita.avif", "originalPrice": 100, "discountedPrice": 50 },
     { "category": "starter", "name": "Tandoori Chaap", "nonVeg": false, "image": "/bobs/imgs/food/starter/tandoori_chaap_updated.jpg", "originalPrice": 189, "discountedPrice": 149 },
-    { "category": "starter", "name": "Tandoori Chicken", "nonVeg": true, "image": "/bobs/imgs/food/starter/tandoori_chicken.jpg", "originalPrice": 349, "discountedPrice": 349 },
-    { "category": "starter", "name": "Tandoori Chap", "nonVeg": false, "image": "/bobs/imgs/food/starter/tandorri_chap.jpg", "originalPrice": 159, "discountedPrice": 159 }
+    { "category": "starter", "name": "Tandoori Chicken", "nonVeg": true, "image": "/bobs/imgs/food/starter/tandoori_chicken.jpg", "originalPrice": 349, "discountedPrice": 349 }
   ]
 }
