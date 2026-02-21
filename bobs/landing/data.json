@@ -1,0 +1,18 @@
+{
+  "items": [
+    { "category": "starter", "name": "Goat kadhai Chaap", "nonVeg": false, "image": "/bobs/imgs/food/mainCourse/goat_kadhai_chaap.avif", "originalPrice": 299, "discountedPrice": 149.50 },
+    { "category": "starter", "name": "Fried Rice", "nonVeg": false, "image": "/bobs/imgs/food/starter/goat_fried_rice.jpg", "originalPrice": 124.50, "discountedPrice": 249 },
+    { "category": "starter", "name": "Chilli Paneer Roll", "nonVeg": false, "image": "/bobs/imgs/food/starter/goat_chilli_paneer_roll.avif", "originalPrice": 159.50, "discountedPrice": 319 },
+    { "category": "starter", "name": "Chilli Chicken Roll", "nonVeg": true, "image": "/bobs/imgs/food/starter/goat_chilli_chicken_roll.avif", "originalPrice": 159.50, "discountedPrice": 319 },
+    { "category": "starter", "name": "Tandoori Chicken Wings (5pc)", "nonVeg": true, "image": "/bobs/imgs/food/starter/tandoori_chicken_wings.avif", "originalPrice": 164.50, "discountedPrice": 329 },
+    { "category": "starter", "name": "Peri Peri Chicken Wings (5pc)", "nonVeg": true, "image": "/bobs/imgs/food/starter/peri_peri_chicken_wings.avif", "originalPrice": 164.0, "discountedPrice": 329 },
+    { "category": "starter", "name": "Chilli Garlic Noodles", "nonVeg": false, "image": "/bobs/imgs/food/starter/chilli_garlic_noodles.avif", "originalPrice": 79.50, "discountedPrice": 159 },
+    { "category": "starter", "name": "Spring Rolls (2pcs)", "nonVeg": false, "image": "/bobs/imgs/food/starter/spring_roll.avif", "originalPrice": 99.50, "discountedPrice": 199 },
+    { "category": "starter", "name": "Hot and Sour Soup", "nonVeg": false, "image": "/bobs/imgs/food/starter/hot_and_sour_soup.jpg", "originalPrice": 50, "discountedPrice": 100 },
+    { "category": "starter", "name": "Bobs Chicken Keema Naan", "nonVeg": false, "image": "/bobs/imgs/food/starter/paneer_tikka.jpg", "originalPrice": 169, "discountedPrice": 129 },
+    { "category": "starter", "name": "Boondi Raita", "nonVeg": false, "image": "/bobs/imgs/food/starter/boondi_raita.avif", "originalPrice": 50, "discountedPrice": 100 },
+    { "category": "starter", "name": "Tandoori Chaap", "nonVeg": false, "image": "/bobs/imgs/food/starter/tandoori_chaap_updated.jpg", "originalPrice": 189, "discountedPrice": 149 },
+    { "category": "starter", "name": "Tandoori Chicken", "nonVeg": true, "image": "/bobs/imgs/food/starter/tandoori_chicken.jpg", "originalPrice": 349, "discountedPrice": 349 },
+    { "category": "starter", "name": "Tandoori Chap", "nonVeg": false, "image": "/bobs/imgs/food/starter/tandorri_chap.jpg", "originalPrice": 159, "discountedPrice": 159 }
+  ]
+}

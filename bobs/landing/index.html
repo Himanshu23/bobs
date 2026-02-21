@@ -5,7 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <title>Bob's landing</title>
+  <title>Bob's — Where cool meets curry</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2PPH12EZSP"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -14,135 +17,371 @@
     gtag('config', 'G-2PPH12EZSP',{ 'page_path': '/instagram-landing' });
   </script>
   <style>
+    :root {
+      --warm-white: #fef9f3;
+      --warm-orange: #e85d2c;
+      --warm-gold: #f4a261;
+      --dark: #1a1512;
+      --shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+      --radius: 16px;
+      --radius-sm: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
+      height: 100vh;
+      height: 100dvh;
       background: url("/bobs/imgs/black-bg.jpg") no-repeat center center fixed;
       background-size: cover;
-      color: white;
-      font-family: Arial, sans-serif;
+      color: var(--warm-white);
+      font-family: 'Outfit', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
-      overflow-y: hidden;
+      overflow: hidden;
     }
 
-    .footer-buttons {
+    body::before {
+      content: '';
       position: fixed;
-      bottom: 20px;
-      width: 90%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 10px;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(26, 21, 18, 0.7) 0%, rgba(26, 21, 18, 0.4) 40%, rgba(26, 21, 18, 0.85) 100%);
+      pointer-events: none;
+      z-index: 0;
     }
 
-    .button {
+    .header {
+      position: relative;
+      z-index: 1;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       width: 100%;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-      background: transparent;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s, box-shadow 0.3s;
-      
+      max-width: 480px;
+      padding: 8px 12px 6px;
     }
 
     .logo img {
-      width: 150px;
-    }
-
-    /* Define the animation */
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
-
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-    /* Apply styles to the .platter class */
-    .platter {
+      width: 96px;
+      height: auto;
       display: block;
-      margin: auto;
-      animation: spin 100s linear infinite;
-      width: 300px;
-      height: 300px; /* or any fixed height */
-      object-fit: cover; /* Adjusts the image to fill without distortion */
-      /* Animation applied */
     }
 
     .whatsapp-button {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       text-decoration: none;
       background-color: #25d366;
       color: white;
-      font-size: 16px;
-      font-weight: bold;
-      padding: 5px 10px;
-      border-radius: 5px;
-      /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s, box-shadow 0.3s; */
-     
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .whatsapp-button:hover {
       background-color: #1ebe5b;
-      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+      transform: translateY(-1px);
+      box-shadow: 0 12px 40px rgba(37, 211, 102, 0.35);
     }
 
-    .whatsapp-button span {
-      margin-left: 0px;
+    .whatsapp-button img {
+      width: 18px;
+      height: 18px;
     }
 
-    .header {
-      display: flex;
-      align-self: flex-end  ;
-      justify-content: space-between;
-      margin: 10px; 
+    .scroll-area {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      min-height: 0;
       width: 100%;
-      /* Optional for separation */
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 100px;
+    }
+
+    .page-title {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 2px 12px 4px;
+      text-align: center;
+    }
+
+    .page-title h1 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--warm-white);
+      margin: 0;
+      letter-spacing: 0.02em;
+    }
+
+    .page-title .tagline {
+      font-size: 0.7rem;
+      color: var(--warm-gold);
+      margin: 2px 0 0;
+    }
+
+    .tiles {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 100%;
+      padding: 4px 4px 6px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+    }
+
+    .tile {
+      background: rgba(254, 249, 243, 0.08);
+      border: 1px solid rgba(254, 249, 243, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+      transition: transform 0.15s, box-shadow 0.15s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tile:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .tile-image-wrap {
+      position: relative;
+    }
+
+    .tile-image {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      display: block;
+    }
+
+    .tile-badge {
+      position: absolute;
+      top: 3px;
+      right: 3px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(254, 249, 243, 0.9);
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+    }
+
+    .tile-badge.veg {
+      background: #22c55e;
+    }
+
+    .tile-badge.nonveg {
+      background: #ef4444;
+    }
+
+    .tile-body {
+      flex-shrink: 0;
+      padding: 3px 4px 4px;
+    }
+
+    .tile-title {
+      font-size: 0.6rem;
+      font-weight: 600;
+      color: var(--warm-white);
+      margin: 0 0 1px;
+      line-height: 1.15;
+      letter-spacing: 0.01em;
+    }
+
+    .tile-price {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      flex-wrap: wrap;
+    }
+
+    .tile-price .original {
+      font-size: 0.55rem;
+      color: rgba(254, 249, 243, 0.5);
+      text-decoration: line-through;
+    }
+
+    .tile-price .discounted {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--warm-gold);
+    }
+
+    .menu-link-wrap {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 0 12px 12px;
+    }
+
+    .menu-link {
+      display: inline-block;
+      color: var(--warm-gold);
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .menu-link:hover {
+      color: var(--warm-white);
+      border-bottom-color: var(--warm-gold);
+    }
+
+    .order-section {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      width: 100%;
+      padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0));
+      background: rgba(26, 21, 18, 0.96);
+      backdrop-filter: blur(8px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .order-section h2 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--warm-white);
+      margin: 0 0 8px;
+      text-align: center;
+      letter-spacing: 0.03em;
+    }
+
+    .order-buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .order-btn {
+      display: block;
+      width: 140px;
+      height: 48px;
+      padding: 0;
+      overflow: hidden;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(254, 249, 243, 0.15);
+    }
+
+    .order-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .order-btn img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   </style>
 </head>
 
 <body>
-  <div class="header">
+  <header class="header">
     <div class="logo">
-      <img src="/bobs/imgs/logo.png" alt="Logo" />
+      <img src="/bobs/imgs/logo.png" alt="Bob's" />
     </div>
-    <div>
-      <a class="whatsapp-button" href="https://wa.me/919643310092" target="_blank" rel="noopener noreferrer"
-      onclick="gtag('event', 'click', { 'event_category': 'instagram_promotion', 'event_label': 'whatsapp' })"
-      >
-        <img src="/bobs/imgs/whats_app.svg" alt="WhatsApp us" style="width: 20px; vertical-align: middle;">
-        <span>+91 9643310092</span>
+    <a class="whatsapp-button" href="https://wa.me/919643310092" target="_blank" rel="noopener noreferrer"
+      onclick="gtag('event', 'click', { 'event_category': 'instagram_promotion', 'event_label': 'whatsapp' })">
+      <img src="/bobs/imgs/whats_app.svg" alt="">
+      <span>+91 9643310092</span>
+    </a>
+  </header>
+
+  <div class="scroll-area">
+    <main class="tiles" id="tiles"></main>
+  </div>
+
+  <section class="order-section">
+    <h2>Order on</h2>
+    <div class="order-buttons">
+      <a class="order-btn" href="https://link.zomato.com/xqzv/rshare?id=9438730630563d53" target="_blank"
+        rel="noopener noreferrer"
+        onclick="gtag('event', 'click', { 'event_category': 'instagram_promotion', 'event_label': 'zomato' })">
+        <img src="/bobs/imgs/zomato-button.jpg" alt="Order on Zomato" />
+      </a>
+      <a class="order-btn" href="https://www.swiggy.com/direct/brand/48321?source=swiggy-direct&subSource=instagram"
+        target="_blank" rel="noopener noreferrer"
+        onclick="gtag('event', 'click', { 'event_category': 'instagram_promotion', 'event_label': 'swiggy' })">
+        <img src="/bobs/imgs/swiggy-button.jpg" alt="Order on Swiggy" />
       </a>
     </div>
-  </div>
-  <div style="margin-top: 20px">
-    <img class="platter" src="/bobs/imgs/food-gif.png">
-  </div>
-  <div class="footer-buttons">
-    <div style="display: flex; flex-direction: column; align-items: center">
-      <h2>Order on</h2>
-      <div style="display: flex; gap:20px">
-        <a class="button" id="#zomato" href="https://link.zomato.com/xqzv/rshare?id=9438730630563d53" target="_blank"
-          rel="noopener noreferrer"
-          onclick="gtag('event', 'click', { 'event_category': 'instagram_promotion', 'event_label': 'zomato' })"
-          >
-          <img src="/bobs/imgs/zomato-button.jpg" alt="Zomato" class="button-icon" />
-        </a>
-        <a class="button" id="#swiggy" href="https://www.swiggy.com/direct/brand/48321?source=swiggy-direct&subSource=instagram"
-        onclick="gtag('event', 'click', { 'event_category': 'instagram_promotion', 'event_label': 'swiggy' })"
-        >
-          <img src="/bobs/imgs/swiggy-button.jpg" alt="Swiggy" class="button-icon" />
-        </a>
-      </div>
-    </div>
-  </div>
+  </section>
+
+  <script>
+    (function () {
+      var base = window.location.pathname.replace(/\/index\.html$/, '').replace(/\/?$/, '') || '.';
+      fetch(base + '/data.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          var container = document.getElementById('tiles');
+          if (!container || !data.items) return;
+          data.items.forEach(function (item) {
+            var article = document.createElement('article');
+            article.className = 'tile';
+            var imgWrap = document.createElement('div');
+            imgWrap.className = 'tile-image-wrap';
+            var img = document.createElement('img');
+            img.className = 'tile-image';
+            img.src = item.image;
+            img.alt = item.name;
+            var badge = document.createElement('span');
+            badge.className = 'tile-badge ' + (item.nonVeg ? 'nonveg' : 'veg');
+            badge.setAttribute('aria-label', item.nonVeg ? 'Non-veg' : 'Veg');
+            imgWrap.appendChild(img);
+            imgWrap.appendChild(badge);
+            var body = document.createElement('div');
+            body.className = 'tile-body';
+            var title = document.createElement('h2');
+            title.className = 'tile-title';
+            title.textContent = item.name;
+            var price = document.createElement('div');
+            price.className = 'tile-price';
+            if (item.originalPrice !== item.discountedPrice) {
+              price.innerHTML = '<span class="original">₹' + item.originalPrice + '</span><span class="discounted">₹' + item.discountedPrice + '</span>';
+            } else {
+              price.innerHTML = '<span class="discounted">₹' + item.originalPrice + '</span>';
+            }
+            body.appendChild(title);
+            body.appendChild(price);
+            article.appendChild(imgWrap);
+            article.appendChild(body);
+            container.appendChild(article);
+          });
+        })
+        .catch(function () {
+          document.getElementById('tiles').innerHTML = '<p style="padding:20px;text-align:center;color:var(--warm-gold)">Unable to load menu.</p>';
+        });
+    })();
+  </script>
 </body>
 </html>
